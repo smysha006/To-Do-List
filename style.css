@@ -2,120 +2,99 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:#0d1b2a;
 }
 
-.todo-container {
-    background: #ffffff;
-    width: 380px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-}
-
-h1 {
+.container {
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    letter-spacing: 1px;
+}
+
+.container h1 {
+    margin-bottom: 10px;
 }
 
 .input-section {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 input {
     flex: 1;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 2px solid #ddd;
-    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
     outline: none;
-    transition: 0.3s;
+    background: rgba(255,255,255,0.15);
+    color: white;
 }
 
-input:focus {
-    border-color: #667eea;
+input::placeholder {
+    color: rgb(204, 204, 204);
 }
 
 button {
-    background: #667eea;
-    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
     border: none;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 15px;
     cursor: pointer;
-    transition: 0.3s;
+    background: rgb(76, 201, 240);
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
 button:hover {
-    background: #5a67d8;
     transform: scale(1.05);
 }
 
 ul {
     list-style: none;
+    margin-top: 15px;
 }
 
 li {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f5f7ff;
-    padding: 10px 12px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    transition: 0.3s;
 }
 
-li:hover {
-    transform: translateX(4px);
-}
-
-li span {
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.done {
+.task-text.completed {
     text-decoration: line-through;
-    color: #888;
+    opacity: 0.6;
+    color: rgb(144, 238, 144);
 }
 
-li button {
-    background: #ff4d4d;
-    padding: 6px 8px;
-    border-radius: 6px;
-    font-size: 14px;
+.task-buttons button {
+    margin-left: 5px;
+    padding: 5px 8px;
+    font-size: 12px;
 }
 
-li button:hover {
-    background: #e60000;
-}
-li input[type="checkbox"] {
-    transform: scale(1.2);
-    cursor: pointer;
+.done-btn {
+    background: rgb(56, 176, 0);
+    color: white;
 }
 
-li span {
-    flex: 1;
-    margin-left: 10px;
-    transition: 0.3s;
-}
-
-.done {
-    text-decoration: line-through;
-    color: #888;
-    opacity: 0.7;
+.remove-btn {
+    background: rgb(208, 0, 0);
+    color: white;
 }
